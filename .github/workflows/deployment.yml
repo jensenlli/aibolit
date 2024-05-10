@@ -6,7 +6,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: CheckOut code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
@@ -15,4 +15,4 @@ jobs:
             password: ${{ secrets.SSH_PASSWORD }}
             script: |
                 cd /var/www/html
-                git pull origin master
+                git pull origin main
