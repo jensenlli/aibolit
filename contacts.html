@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Айболит | Ветклиника</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slyle.css">
+    
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header_wrapper">
+                <div class="header_logo">
+                    <a href="index.html" class="header_logo-link">
+                        <img src="./svg/logo.svg" alt="Айболит Ветеринарная клиника" class="header_logo-pic">
+                    </a>
+                </div>
+    
+                <nav class="header_nav">
+                    <ul class="header_list">
+                        <li class="header_item">
+                            <a href="lk.html" class="header_link">Личный кабинет</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="uslugi.html" class="header_link">Услуги</a>
+                        </li>
+                        <li class="header_item">
+                            <a href="contacts.html" class="header_link">Контакты</a>
+                        </li>
+                        <li class="header_item">
+                            <p class="open_reg">
+                                <button id="open-modal2" class="open_reg_btn">Вход</button>
+                            </p>
+                        </li>
+                        <li class="header_item2">
+                            <a href="contacts.html" class="header_link2">Ульяновск</a> 
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header_geo">
+                    <img src="./svg/geo.svg" alt="Айболит Ветеринарная клиника" class="header_geo-pic">
+                </div>
+            </div>
+        </div>
+        <script defer src="js/open_1.js" ></script>
+        <hr class="hr-shelf">
+    </header>
+
+    <main class="main">
+        <section class="intro">
+            <div class="wrapper">
+                <h1 class="intro_title_cont">КОНТАКТЫ</h1>
+
+                <div class="contacts_geo">
+                    <img src="./svg/geo.svg" alt="Адрес" class="contacts_geo-pic">
+                </div>
+                <h1 class="intro_geo">г. Ульяновск, ул. Набережная реки Свияги, 1</h1>
+
+                <div class="contacts_number">
+                    <img src="./svg/телефон.svg" alt="Номер" class="contacts_number-pic">
+                </div>
+                <h1 class="intro_number">+7 999 999 99 99</h1>
+
+                <div class="contacts_time">
+                    <img src="./svg/режим работы.svg" alt="Время работы" class="contacts_time-pic">
+                </div>
+                <h1 class="intro_time">КРУГЛОСУТОЧНО</h1>
+
+                <div style="position:relative;overflow:hidden;">
+                    <a href="https://yandex.ru/maps/195/ulyanovsk/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:fixed;top:0;"></a>
+                    <a href="https://yandex.ru/maps/195/ulyanovsk/house/ulitsa_naberezhnaya_reki_sviyagi_1/YEEYdQJlSU0GQFtufX54c3pkbA==/?ll=48.355081%2C54.292678&utm_medium=mapframe&utm_source=maps&z=17.17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Набережная реки Свияги, 1 — Яндекс Карты</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=48.355081%2C54.292678&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxOTY1ODgwNDE3ElrQoNC-0YHRgdC40Y8sINCj0LvRjNGP0L3QvtCy0YHQuiwg0YPQu9C40YbQsCDQndCw0LHQtdGA0LXQttC90LDRjyDRgNC10LrQuCDQodCy0LjRj9Cz0LgsIDEiCg2ba0FCFbMrWUI%2C&z=17.17" width="700" height="500" frameborder="1" allowfullscreen="true" style="position:fixed;top:200px;right:150px">
+                    </iframe>
+                </div>
+
+                <style>
+                    #number_ph{
+                     padding: 15px;
+                     border-radius: 20px;
+                     border: 1px solid var(--brown-bg, #EDE9E8);
+                     background: #FFF;
+                     color: #59443F;
+                     padding-left: 25px; /* Расстояние текста в блоке от левого края */
+                    }
+                </style>
+
+                <div class="modal" id="modal-box-open1">
+                    <div class="modal__box_2">
+                        <button class="modal__box_bt" id="close_modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 22 17" fill="none">
+                                <path d="M7.63599 11.1134L11.425 8.31553L15.214 5.5177" stroke="#C3B9B5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                                <path d="M7.63599 5.5177L11.425 8.31553L15.214 11.1134" stroke="#C3B9B5" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+
+                        <p>Вход или регистрация</p>
+                        <form>
+                            <input type="text" class="phone2" id="number_ph" placeholder="+7 999 999 99 99">
+                        </form>
+                        <p class="dalee_button">
+                            <button onclick="document.location = 'lk.html'" type="submit" class="dalee" >ДАЛЕЕ</button>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+            <script defer src="js/open_1.js" ></script>
+        </section>
+    </main>
+</body>
+</html>
