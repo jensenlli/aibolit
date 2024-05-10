@@ -14,5 +14,5 @@ jobs:
             username: ${{ secrets.SSH_USERNAME }}
             password: ${{ secrets.SSH_PASSWORD }}
             script: |
-                cd minttey3.beget.tech/public_html
+                cd /var/www/html/
                 git pull origin master
