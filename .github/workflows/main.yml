@@ -1,0 +1,18 @@
+name: CICD
+on:
+  push:
+jobs:
+    Explore-Github-Action:
+      runs-on: ubuntu-latest
+      steps:
+      - name: CheckOut code
+        uses: actions/checkout@v4
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USERNAME }}
+            password: ${{ secrets.SSH_PASSWORD }}
+            script: |
+                cd /var/www/html/
+                git pull origin master
