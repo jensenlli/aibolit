@@ -1,6 +1,6 @@
 name: CICD
 on:
-  push:
+  [push]
 jobs:
     Explore-Github-Action:
       runs-on: ubuntu-latest
@@ -16,3 +16,50 @@ jobs:
             script: |
                 cd minttey3.beget.tech/public_html
                 git pull origin master
+
+    Explore-Github-Action2:
+      runs-on: ubuntu-latest
+      steps:
+      - name: CheckOut code
+        uses: actions/checkout@v4
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USERNAME }}
+            password: ${{ secrets.SSH_PASSWORD }}
+            script: |
+                cd /var/www/html
+                git pull origin master
+
+
+    Explore-Github-Action3:
+      runs-on: ubuntu-latest
+      steps:
+      - name: CheckOut code
+        uses: actions/checkout@v4
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USERNAME }}
+            password: ${{ secrets.SSH_PASSWORD }}
+            script: |
+                cd /var/www/html
+                git pull origin main
+                
+
+    Explore-Github-Action4:
+      runs-on: ubuntu-latest
+      steps:
+      - name: CheckOut code
+        uses: actions/checkout@v4
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+            host: ${{ secrets.SSH_HOST }}
+            username: ${{ secrets.SSH_USERNAME }}
+            password: ${{ secrets.SSH_PASSWORD }}
+            script: |
+                cd minttey3.beget.tech/public_html
+                git pull origin main
