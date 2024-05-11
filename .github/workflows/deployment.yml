@@ -13,6 +13,7 @@ jobs:
         with:
           node-version: '14'
       - run:
+          cd aibolit_vetclinica/public_html
           node test_slide.js
 
       - name: Deploy
