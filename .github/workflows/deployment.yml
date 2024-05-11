@@ -12,8 +12,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '14'
+          script:
+            cd aibolit_vetclinica/public_html
       - run:
-          cd aibolit_vetclinica/public_html
           node test_slide.js
 
       - name: Deploy
