@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '14'
           script:
-            cd aibolit_vetclinica/public_html
+            cd aibolit_vetclinica/public_html/js
       - run:
           node test_slide.js
 
