@@ -1,0 +1,11 @@
+{
+    "name": "aibolit",
+    "version": "1.0.0",
+    "main": "index.html",
+    "scripts": {
+      "test": "jest"
+    },
+    "devDependencies": {
+      "jest": "^27.0.6"
+    }
+  }
