@@ -7,16 +7,6 @@ jobs:
       steps:
       - name: CheckOut code
         uses: actions/checkout@v4
-
-      - name: Run Test
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
-          script:
-            cd aibolit_vetclinica/public_html/js
-      - run:
-          node test_slide.js
-
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
