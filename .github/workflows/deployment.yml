@@ -7,8 +7,14 @@ jobs:
       steps:
       - name: CheckOut code
         uses: actions/checkout@v4
-      - name: Test slid
-        uses: node test_slide.js
+
+      - name: Run Test
+        uses: actions/setup-node@v4
+        with:
+          node-version: '14'
+      - run:
+          node test_slide.js
+
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
