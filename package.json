@@ -1,12 +1,12 @@
 {
-    "name": "aibolit",
-    "version": "1.0.0",
-    "main": "index.html",
-    "scripts": {
-      "test": "jest"
-    },
-    
-    "devDependencies": {
-      "jest": "^27.0.6"
-    }
+  "name": "modal-test",
+  "version": "1.0.0",
+  "description": "Тестирование модального окна",
+  "main": "thanks.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^16.6.0"
+  }
 }
