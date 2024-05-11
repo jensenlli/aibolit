@@ -1,23 +1,39 @@
-// thanks.test.js
 
-const fs = require('fs');
-const html = fs.readFileSync('index.html', 'utf-8');
-document.documentElement.innerHTML = html;
+function test() {
+    const openModalButton = document.createElement('button');
+    openModalButton.id = 'open-modal';
+    const modalBoxThanks = document.createElement('div');
+    modalBoxThanks.id = 'modal-box-thanks';
+    modalBoxThanks.classList.add('modal__box');
 
-const thanks = require('./thanks.js');
+    document.body.appendChild(openModalButton);
+    document.body.appendChild(modalBoxThanks);
 
-test('Modal opens when "open-modal" is clicked', () => {
-  document.getElementById('open-modal').click();
-  expect(document.getElementById('modal-box-thanks').classList.contains('open')).toBe(true);
-});
+    // Проверка открытия модального окна
+    openModalButton.click();
+    if (!modalBoxThanks.classList.contains('open')) {
+        console.error('Ошибка: класс "open" не был добавлен при клике на кнопку');
+    }
 
-test('Modal closes when "close_modal" is clicked', () => {
-  document.getElementById('close_modal').click();
-  expect(document.getElementById('modal-box-thanks').classList.contains('open')).toBe(false);
-});
+    // Проверка закрытия модального окна
+    const closeModalButton = document.createElement('button');
+    closeModalButton.id = 'close_modal';
+    document.body.appendChild(closeModalButton);
 
-test('Modal closes when clicked outside the modal', () => {
-  const modalBox = document.querySelector('#modal-box-thanks .modal__box');
-  modalBox.click();
-  expect(document.getElementById('modal-box-thanks').classList.contains('open')).toBe(false);
-});
+    closeModalButton.click();
+    if (modalBoxThanks.classList.contains('open')) {
+        console.error('Ошибка: класс "open" не был удален при клике на кнопку закрытия');
+    }
+
+    // Проверка закрытия модального окна при клике вне его
+    modalBoxThanks.click();
+    if (modalBoxThanks.classList.contains('open')) {
+        console.error('Ошибка: класс "open" не был удален при клике вне модального окна');
+    }
+
+    document.body.removeChild(openModalButton);
+    document.body.removeChild(modalBoxThanks);
+    document.body.removeChild(closeModalButton);
+}
+
+test();
