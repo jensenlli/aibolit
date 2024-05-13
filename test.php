@@ -1,6 +1,5 @@
 <?php
 use PHPUnit\Framework\TestCase;
-use Facebook\WebDriver\Remote\RemoteWebDriver;
 use Facebook\WebDriver\WebDriverBy;
 use Facebook\WebDriver\WebDriverExpectedCondition;
 
