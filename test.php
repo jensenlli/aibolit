@@ -1,6 +1,6 @@
 <?php
 
-require 'thanks.js';
+require '../js/thanks.js';
 
 // Функция для проверки добавления класса "open"
 function testAddClass() {
