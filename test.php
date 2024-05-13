@@ -1,6 +1,6 @@
 <?php
 
-require '../aibolit/js/thanks.js';
+require '../thanks.js';
 
 // Функция для проверки добавления класса "open"
 function testAddClass() {
