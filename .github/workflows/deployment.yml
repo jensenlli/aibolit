@@ -16,9 +16,7 @@ jobs:
         with:
           php-version: '7.4'
       - name: Run test
-        run: | 
-          chmod +x vendor/bin/phpunit
-          composer run-script test
+        run: php test.php
 
     deploy:
       runs-on: ubuntu-latest
