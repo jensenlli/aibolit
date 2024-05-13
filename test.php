@@ -10,7 +10,7 @@ function testAddClass() {
     $output = ob_get_clean();
 
     // Проверяем наличие класса "open" в соответствующем элементе
-    if (document.getElementById("modal-box-thanks").classList.remove("open")) {
+    if (strpos($output, 'classList.contains("open")')) {
         echo "Тест успешно пройден: класс 'open' был добавлен.";
     } else {
         echo "Тест не пройден: класс 'open' не был добавлен.";
