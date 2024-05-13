@@ -1,0 +1,12 @@
+{
+    "name": "vendor/engforyou",
+    "description": "CICD",
+    "require-dev": {
+        "phpunit/phpunit": "^8.5"
+    },
+    
+    "scripts": {
+        "test": "vendor/bin/phpunit test"
+    },
+    "license": "MIT"  
+}
