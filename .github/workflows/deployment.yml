@@ -16,9 +16,7 @@ jobs:
         with:
           php-version: '7.4'
       - name: Run test
-        run: |
-          cd public_html
-          php test.php
+        run: php test.php
 
     deploy:
       runs-on: ubuntu-latest
