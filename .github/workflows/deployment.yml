@@ -11,11 +11,15 @@ jobs:
         run: composer validate --strict  
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
       - name: Run test
         run: | 
           chmod +x vendor/bin/phpunit
           composer run-script test
-          
+
     deploy:
       runs-on: ubuntu-latest
       steps:
