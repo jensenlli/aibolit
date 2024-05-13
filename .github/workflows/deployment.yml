@@ -2,17 +2,23 @@ name: CICD
 on:
   [push]
 jobs:
-    Explore-Github-Action:
+    test:
       runs-on: ubuntu-latest
       steps:
       - name: CheckOut code
         uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '14'
-      - name: Run tests
-        run: node ../js/test.js
+      - name: Validate composer
+        run: composer validate --strict  
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+      - name: Run test
+        run: | 
+          chmod +x vendor/bin/phpunit
+          composer run-script test
+          
+    deploy:
+      runs-on: ubuntu-latest
+      steps:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
